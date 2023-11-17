@@ -30,12 +30,23 @@ namespace Tyuiu.ElsufevMP.Sprint5.Task2.V6.Lib
             {
                 for (int j = 0; j < columns; j++)
                 {
-                    if (matrix[i, j] == 1)
+                    if (matrix[i, j] > 0)
+                    {
+                        matrix[i, j] = 1;
+                    }
+                }
+            }
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    if (matrix[i, j] < 0)
                     {
                         matrix[i, j] = 0;
                     }
                 }
             }
+
             string str = "";
 
             for (int i = 0; i < rows; i++)
